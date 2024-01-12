@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 40vw;
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "nav nav nav nav"
+                                    "main main empty sidebar"
+                                    "foot foot foot foot";
+        }
+        .items{
+            border:2px solid red;
+        }
+        .box1{
+           grid-area: nav;
+           background-color: blue;
+           text-align: center;
+           font-size: 50px; 
+           font-weight: 600;
+        }
+        .box2{
+            grid-area: main;
+            background-color: rgb(229, 229, 247);
+            text-align: center;
+            font-size: 50px;
+            font-weight: 600;
+        }
+        .box3{
+            grid-area: empty;
+            background-color: rgb(140, 255, 0);
+            text-align: center;
+            font-size: 50px;
+            font-weight: 600;
+        }
+        .box4{
+            grid-area: sidebar;
+            background-color: rgb(255, 0, 0);
+            text-align: center;
+            font-size: 50px;
+            font-weight: 600;
+        }
+        .box5{
+            grid-area: foot;
+            background-color: rgb(174, 0, 255);
+            text-align: center;
+            font-size: 50px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items box1">Nav Bar</div>
+        <div class="items box2">Main</div>
+        <div class="items box3"></div>
+        <div class="items box4">Side Bar</div>
+        <div class="items box5">Footer</div>
+    </div>
+</body>
+</html>
